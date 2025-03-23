@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+/* common */
+
+:root {
+    --main-bg-color: #f8f9fa;
+    --main-text-color: rgba(102, 102, 102, 0.8);
+    --main-primary-color: #72be43;
+    --x: #14b81f;
+    --y:#d6d6d6;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.card-wrapper{
+    max-width: 1100px;
+    margin : 0 60px 35px;
+    padding : 20px 10px;
+    overflow: hidden;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #50B648 !important;
+}
+
+
+  
+body{
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    font-size:16px;
+}
+
+.active{
+    background-color: #14b81f !important;
+}
+
+/* navbar  */
+#navbar-header .navbar{
+    color: var(--main-text-color);
+    
+}
+
+#navbar-header .dropdown-menu{
+    background-color: rgba(10, 10, 10, 0.4);
+    width: 250px;
+    border-color: hsla(0, 0%, 100%, .2);
+}
+
+#navbar-header .dropdown-menu a{
+    color : #fff;
+}
+
+#navbar-header .dropdown-menu a:hover{
+    background-color: rgba(44, 44, 44, .29);
+}
+
+
+#navbar-header .right-navbar .nav-item a{
+    color: var(--main-text-color);
+
+}
+
+#navbar-header .navbar-nav li a:hover{
+    color: var(--main-primary-color);
+}
+
+
+
+#nav_dropdown .btn_1{
+    background-color: #d6d6d6;
+}
+
