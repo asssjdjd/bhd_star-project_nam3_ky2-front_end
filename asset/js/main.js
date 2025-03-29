@@ -130,4 +130,54 @@ btn_left_slide_header.addEventListener('click', () => {
     handleEventChangeSlide = setInterval(handleChangeRightSlide,7000)
 } )
 
+// content
+
+
+// now-showing
+const cardItems1 = document.querySelectorAll("#now-showing-slide .card-item");
+
+cardItems1.forEach((card) => {
+  const buyNow = card.querySelector(".buy_now");
+  const continueEl = card.querySelector(".continue");
+
+  // Khi chuột vào card, hiển thị các phần tử
+  card.addEventListener("mouseenter", () => {
+    if (buyNow) buyNow.style.visibility = "visible";
+    if (continueEl) continueEl.style.display = "block";
+  });
+
+  // Khi chuột rời khỏi card, ẩn các phần tử
+  card.addEventListener("mouseleave", () => {
+    if (buyNow) buyNow.style.visibility = "hidden";
+    if (continueEl) continueEl.style.display = "none";
+  });
+});
+
+
+
+// coming-soon
+const cardItems_coming_soon = document.querySelectorAll("#coming-soon .card-link");
+
+cardItems_coming_soon.forEach((card) => {
+  // Lấy phần tử ảnh, buy_now và continue trong mỗi card
+  const img = card.querySelectorAll("img");
+  img.forEach((img_index) => {
+    const continueEl = card.querySelector(".continue");
+    const continueEl1 = card.querySelector(".continue1");
+
+    // Gắn sự kiện cho ảnh của card
+    img_index.addEventListener("mouseover", () => {
+        if (continueEl) continueEl.style.display = "block";
+        if (continueEl1) continueEl1.style.display = "block";
+    });
+
+    img_index.addEventListener("mouseout", () => {
+        if (continueEl) continueEl.style.display = "none";
+        if (continueEl1) continueEl1.style.display = "none";
+    });
+
+
+  })
+
+});
 
