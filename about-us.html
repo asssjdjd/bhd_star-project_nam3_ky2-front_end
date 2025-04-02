@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <!-- Link swiperJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- banner -->
+        <div id="top-banner">
+            <img src="./asset/img/Ngang-02.jpg" alt="header" width="100%" height="125px">
+        </div>
+        <!-- navbar -->
+        <div id="navbar-header" class="sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fw-bold">
+                <div class="container">
+                    <!-- button navbar -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-5">
+                            <li class="nav-item">
+                                <div class="container">
+                                    <img src="./asset/img/logo2024.png" alt="logo_navbar" height="35" width="160">
+                                </div>
+
+                            </li>
+                            <!-- dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" class="navbarDropdow" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    NOW SHOWING
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item " href="#">LỊCH CHIẾU PHIM</a></li>
+                                    <li><a class="dropdown-item" href="#">LỊCH CHIẾU RẠP</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ĐỒ ĂN/COMBO</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">KHUYẾN MÃI</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" class="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    VỀ BHD STAR
+                                </a>
+                                <ul class="dropdown-menu fw-bold fs-8" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">HỆ THỐNG RẠP</a></li>
+                                    <li><a class="dropdown-item" href="#">VỀ CHÚNG TÔI</a></li>
+                                    <li><a class="dropdown-item" href="#">TUYỂN DỤNG</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                        <!-- form navbar register -->
+                        <div class="d-flex" id="right-navbar">
+                            <a title="Đăng ký/Đăng nhập" href="#"
+                                class="text-decoration-none text-white p-2 rounded-3 fw-normal position-relative"
+                                aria-expanded="false">
+                                <span id="hover_nav" class="btn btn-md text-white p-2 rounded-3 fw-bold"
+                                    style="border: 1px solid #e3f2c0; background-color: #72be43;">
+                                    Đăng nhập/Đăng ký
+                                </span>
+                                <div id="nav_dropdown" class="card position-absolute top-5 end-0 fw-bold "
+                                    style="width: 320px; transform: translateX(20px); display:none">
+                                    <div class="card-body d-flex flex-column justify-content-end pb-4"
+                                        style="background-color: #9b9b9b; font-size:14px">
+                                        <form id="loginForm" action="#" method="POST">
+                                            <div class="mb-3">
+                                                <label for="emailInput" class="form-label">Email*</label>
+                                                <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="passwordInput" class="form-label">Mật khẩu*</label>
+                                                <input type="password" class="form-control" id="passwordInput" placeholder="Mật khẩu" required>
+                                            </div>
+                                            <div class="mb-2 d-flex justify-content-end p-2" id = "button_forgotpassword">
+                                                 <!-- <a href="#" id="forgotPassword">Quên mật khẩu?</a>  -->
+                                                 forgot password
+                                            </div>
+                                           
+                                            <button type="submit" class="btn btn-md btn_1 btn-primary w-100 mb-2 border-0 fw-bold mb-3"
+                                                style="background-color: #72be43;"> Đăng nhập</button>
+                                            <button type="button" id="registerButton" class="btn btn-md btn_2 btn-primary w-100 mb-2 border-0 fw-bold "
+                                                style="background-color: #fff; color: #72be43;">Đăng ký thành viên</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--  main -->
+        <hr style=" border: 1px solid #72be43; margin-left: 5%; margin-right: 5%; margin-top: 0px;">
+
+        
+        <div class="main mt-4" >
+            <div class="container">
+
+                <div class="col-inner">
+					<div id="text-775696433" class="text">
+				        <h2 class=" mb-4" >Về chúng tôi</h2>
+	                </div>
+                </div>
+
+                <div class="swiper mb-5">
+                    <div class="cart-wrapper-about-us">
+                        <ul class="card-list swiper-wrapper">
+                            <li class="card-item-about-us swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="https://www.bhdstar.vn/wp-content/uploads/2023/09/aboutus1.jpg" class="card-image">
+                                    <p>
+                                        BHD Star Cineplex được biết đến với cụm rạp đầu tiên với 5 phòng chiếu vào năm 2010. Từ 2014, BHD Star Cineplex là cụm rạp của doanh nghiệp Việt Nam duy nhất có sức phát triển mạnh mẽ, qua việc liên tục mở thêm các vị trí rạp mới, ở những khu vực đắc địa của Thành phố Hồ Chí Minh, Hà Nội, Huế và các tỉnh thành khác. <br>
+                                        Bên cạnh việc sẽ tiếp tục mở rộng ra các tỉnh thành khác, giá trị cốt lõi của thương hiệu BHD Star Cineplex là luôn luôn bảo đảm trải nghiệm của khách hàng qua chất lượng phục vụ, đồng nhất tại tất cả các cụm rạp.
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="card-item-about-us swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="https://www.bhdstar.vn/wp-content/uploads/2023/09/aboutus2.jpg" class="card-image">
+                                    <p>
+                                        BHD có tên đầy đủ là Công ty TNHH Bình Hạnh Đan, thành lập vào năm 1996. Công ty có hoạt động về Gameshow truyền hình và các hoạt động về phim như sản xuất phim, hợp tác đưa phim nước ngoài về Việt Nam và mở các rạp chiếu phim gọi tên là BHD Star Cineplex. <br>
+                                        BHD Star Cineplex là một trong những cụm rạp đầu tiên. Luôn đặt trải nghiệm khách hàng lên hàng đầu nên BHD Star Cineplex ngày càng thu hút được đông đảo khách hàng và tiến thân trở thành cụm rạp hàng đầu Việt Nam.
+            
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="card-item-about-us swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="https://www.bhdstar.vn/wp-content/uploads/2023/09/aboutus3.jpg" class="card-image">
+                                    <p>
+                                        BHD Star Cineplex luôn được trang bị kỹ lưỡng về âm thanh hình ảnh luôn được áp dụng các công nghệ tối tân nhất mang lại trải nghiệm chân thật nhất, không gian thoải mái, sạch sẽ để khách hàng luôn yên tâm khi sử dụng dịch vụ và đội ngũ nhân viên được cam kết phục vụ đầy đủ, chuyên nghiệp thoả mãn các yêu cầu của khách hàng kịp thời.
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="card-item-about-us swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="https://www.bhdstar.vn/wp-content/uploads/2023/09/aboutus4.jpg" class="card-image">
+                                    <p>
+                                        BHD Star Cineplex là hệ thống cụm rạp cao cấp với chất lượng âm thanh và hình ảnh hiện đại, được thành lập vào năm 2010.
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                 </div>
+            </div>
+
+            <hr style=" border: 1px solid #72be43; margin-left: 5%; margin-right: 5%; margin-top: 0px;">
+
+            <div class="container">
+                <div class="col-inner">
+					<div id="text-775696433" class="text">
+				        <h2 class="title-button mb-4 fw-bold btn fs-3 p-1 ps-3 pe-3" style="color:#72be43; border : 1px solid #72be43; border-radius: 10px;">Khuyến mãi</h2>
+	                </div>
+                </div>
+
+                <!-- card - wrapper -->
+                 <div class="swiper mb-5">
+                    <div class="cart-wrapper2">
+                        <ul class="card-list swiper-wrapper">
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="https://www.bhdstar.vn/wp-content/uploads/2024/11/COMBO-34K-PHAM-HUNG-1536x864.jpg" class="card-image">
+                                    <h4 class="cart-title">
+                                        U22 MUA COMBO BẮP NƯỚC GIÁ CHỈ 34K – CHỈ TẠI BHD STAR PHẠM HÙNG
+                                    </h4>
+                                    <p>
+                                        U22 MUA COMBO BẮP NƯỚC GIÁ CHỈ 34K Chỉ có tại BHD Star Phạm Hùng Các bạn U22 đâu rồi tập trung qua rạp BHD Star Phạm Hùng nhanh nèeee,
+                                        combo bắp nước mà giá chỉ có 34k thôi đó chời ơi không bây giờ thì bao giờ nữa hảaaa Địa chỉ:Tầng 4, Satra Centre […]
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="https://www.bhdstar.vn/wp-content/uploads/2025/01/PEP1920x1080.jpg" class="card-image">
+                                    <h4 class="cart-title">
+                                        ĐÃI BẠN SIÊU THÂN
+                                    </h4>
+                                    <p>
+                                        ĐÃI BẠN SIÊU THÂN + Tặng ngay 01 PEPSI “ĐÃ KHÁT” khi mua 2 vé xem phim suất chiếu trước 19h. + Chỉ với 59.000đ có ngay COMBO “ĐÃ KHÁT ĐÃ THÈM” (1 Bắp + 1 nước).
+                                        * Ưu đãi áp dụng từ: 04.01.2025 – 28.01.2025. * Áp dụng cho tất cả các cụm rạp […]
+            
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="https://www.bhdstar.vn/wp-content/uploads/2025/01/PEP1920x1080.jpg" class="card-image">
+                                    <h4 class="cart-title">
+                                        ĐÃI BẠN SIÊU THÂN
+                                    </h4>
+                                    <p>
+                                        ĐÃI BẠN SIÊU THÂN + Tặng ngay 01 PEPSI “ĐÃ KHÁT” khi mua 2 vé xem phim suất chiếu trước 19h. + Chỉ với 59.000đ có ngay COMBO “ĐÃ KHÁT ĐÃ THÈM” (1 Bắp + 1 nước).
+                                        * Ưu đãi áp dụng từ: 04.01.2025 – 28.01.2025. * Áp dụng cho tất cả các cụm rạp […]
+            
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="https://www.bhdstar.vn/wp-content/uploads/2024/12/SUPSALE1920x1080.jpg" class="card-image">
+                                    <h4 class="cart-title">
+                                        CƠN BÃO “SALE” SIÊU KHỦNG TẠI BHD STAR
+                                    </h4>
+                                    <p>
+                                        ĐÓN NHẬN CƠN BÃO “SALE” SIÊU KHỦNG KHIẾP TẠI BHD STAR CINEPLEX. + Tặng ngay 01 PEPSI (trị giá 36.000đ) khi mua 2 vé xem phim bất kì. + 
+                                        Chỉ với 59.000đ có ngay COMBO “ĐÃ KHÁT ĐÃ THÈM” (1 Bắp + 1 nước). * Ưu đãi áp dụng từ: 04.01.2024 – 28.01.2025 (Không giới […]
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="card-item swiper-slide">
+                                <a href="#" class="card-link">
+                                    <img src="https://www.bhdstar.vn/wp-content/uploads/2024/11/466793530_1003149731851513_661564586689858699_n.jpg" class="card-image">
+                                    <h4 class="cart-title">
+                                        KHUYẾN MÃI ĐẶC BIỆT KHI XEM PHIM LINH MIÊU TẠI BHD STAR
+                                    </h4>
+                                    <p>
+                                        CHÀO ĐÓN SIÊU BÃO LINH MIÊU SẮP ĐỔ BỘ TẠI BHD STAR Siêu ưu đãi cho đội nhóm khi đến xem phim tại BHD Star Cinplex từ ngày 11.11 – 18.11.2024 
+                                        Thể lệ chương trình:Mỗi nhóm 3 người khi mua vé xem phim tại BHD Star sẽ được tặng ngay 1 VÉ XEM LINH MIÊU *Lưu ý: […]
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                 </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <!-- Column 1: BHD STAR Information -->
+                    <div class="col-md-4">
+                    <h5 class="section-title-normal">
+                        <span>VỀ BHD STAR</span>
+                    </h5>
+                    <ul class="list-unstyled">
+                        <li>Hệ thống rạp</li>
+                        <li>Cụm rạp</li>
+                        <li>Liên hệ</li>
+                    </ul>
+                    <a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=46613" target="_blank" rel="noopener">
+                        <img class="alignnone wp-image-159" src="https://www.bhdstar.vn/wp-content/uploads/2023/08/image-21.png " alt="" width="190" height="72">
+                    </a>
+                    </div>
+                    <!-- Column 2: Terms & Conditions -->
+                    <div class="col-md-4">
+                        <h5 class="section-title-normal">
+                            <span>QUY ĐỊNH & ĐIỀU KHOẢN</span>
+                        </h5>
+                        <ul class="list-unstyled">
+                            <li>Quy định thành viên</li>
+                            <li>Điều khoản</li>
+                            <li>Hướng dẫn đặt vé trực tuyến</li>
+                            <li>Quy định và chính sách chung</li>
+                            <li>Chính sách bảo vệ thông tin cá nhân của người tiêu dùng</li>
+                        </ul>
+                    </div>
+                    <!-- Column 3: Customer Support -->
+                    <div class="col-md-4">
+                        <h5 class="section-title-normal">
+                            <span>CHĂM SÓC KHÁCH HÀNG</span>
+                        </h5>
+                        <br>
+                        <p>Hotline: 19002099</p>
+                        <p>Giờ làm việc: 9:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ, Tết)</p>
+                        <p>Email hỗ trợ: <a href="mailto:cskh@bhdstar.vn">cskh@bhdstar.vn</a></p>
+                    </div>
+                    <div>
+                        <a href="#" class="me-3"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="me-3"><i class="fa fa-instagram"></i></a>
+                        <a href="#" class="me-3"><i class="fa fa-tiktok"></i></a>
+                        <a href="#" class="me-3"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-4">
+                <p class="mb-0">Công ty TNHH MTV Ngôi Sao Cineplex BHD Việt Nam</p>
+                <p class="mb-0">Giấy CNĐKDN: 0104597158. Đăng ký lần đầu ngày 15 tháng 04 năm 2010</p>
+                <p class="mb-0">Địa chỉ: Tầng 11, Tòa nhà Hồng Hà Building, Lý Thường Kiệt, P. Phan Chu Trinh, Quận Hoàn Kiếm, Hà Nội</p>
+                <p class="mb-0">Hotline: 19002099</p>
+                <p class="mb-0">COPYRIGHT 2010 BHD STAR. ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+        
+
+    </div>
+    <!-- Link SwiperJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="./asset/js/main.js"></script>
+    <script src="./asset/js/swiper.js"></script>
+</body>
+
+</html>
