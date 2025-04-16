@@ -1,0 +1,368 @@
+:root {
+    --main-bg-color: #f8f9fa;
+    --main-text-color: rgba(102, 102, 102, 0.8);
+    --main-primary-color: #72be43;
+    --x: #14b81f;
+    --y:#d6d6d6;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "Montserrat", serif; */
+
+}
+
+.card-wrapper{
+    max-width: 1100px;
+    margin : 0 60px 35px;
+    padding : 20px 10px;
+    overflow: hidden;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background: #50B648 !important;
+}
+
+
+  
+body{
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    font-size:16px;
+}
+
+.active{
+    background-color: #14b81f !important;
+}
+
+/* Loại ghế */
+.standard {
+    color: lightgray;
+}
+
+.sold {
+    color: red;
+}
+
+.vip {
+    color: gold;
+}
+
+.couple {
+    color: cyan;
+}
+
+.selected {
+    color: green !important;
+}
+
+/* end common */
+
+
+/* navbar  */
+#navbar-header .navbar{
+    color: var(--main-text-color);
+    
+}
+
+#navbar-header .dropdown-menu{
+    background-color: rgba(10, 10, 10, 0.4);
+    width: 250px;
+    border-color: hsla(0, 0%, 100%, .2);
+}
+
+#navbar-header .dropdown-menu a{
+    color : #fff;
+}
+
+#navbar-header .dropdown-menu a:hover{
+    background-color: rgba(44, 44, 44, .29);
+}
+
+
+#navbar-header .right-navbar .nav-item a{
+    color: var(--main-text-color);
+
+}
+
+#navbar-header .navbar-nav li a:hover{
+    color: var(--main-primary-color);
+}
+
+
+
+#nav_dropdown .btn_1{
+    background-color: #d6d6d6;
+}
+
+/* special combo */
+.card-list .card-item{
+    list-style: none;
+}
+
+.card-item .card-link .cart-title {
+    margin-top: 15px;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin-bottom: 7px;
+    color: var(--main-primary-color);
+}
+
+.card-item .card-link p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.card-list .card-item .card-link {
+    /* width: 400px; */
+    user-select: none;
+    display: block;
+    background: #fff;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.card-list .card-link .card-image{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.cart i {
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart i::after { 
+    content: "0";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-primary-color);
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.primary {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid var(--main-primary-color);
+    padding: 3px 9px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    border-color: #90C63F;
+    background: linear-gradient(180deg, #50B648 0%, #90C63F 59.90%, #B2EC0F 99.48%);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.10);
+}
+
+.primary:hover {
+    background: var(--main-primary-color);
+    transition: 0.01s ease;
+    color: #fff;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--main-primary-color);
+}
+
+.title:hover {
+    color: #1b0808;
+    transition: 0.3s;
+}
+
+/* discount */
+
+
+.cart-wrapper3 .card-item li {
+    width: auto;
+    height: auto; /* Tạo khung vuông */
+    object-fit: contain; /* Hoặc cover, tùy nhu cầu */
+
+}
+
+.cart-wrapper3 .card-item a {
+    background: transparent !important;
+}
+
+/* footer */
+.section-title-normal span:after {
+    content: "";
+    display: block;
+    width: 117px;
+    height: 12px;
+    border-radius: 20px;
+    border: 1px solid #90C63F;
+    background: linear-gradient(180deg, #50B648 0%, #90C63F 59.9%, #B2EC0F 99.48%);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
+    margin-top: 16px;
+}
+
+.list-unstyled {
+    padding-top: 12px;
+}
+
+.list-unstyled li {
+    cursor: pointer;
+    margin-top: 12px;
+}
+.list-unstyled li:hover {
+    color: var(--main-primary-color);
+    transition: 0.3s;
+}
+
+
+/* footer */
+.section-title-normal span:after {
+    content: "";
+    display: block;
+    width: 117px;
+    height: 12px;
+    border-radius: 20px;
+    border: 1px solid #90C63F;
+    background: linear-gradient(180deg, #50B648 0%, #90C63F 59.9%, #B2EC0F 99.48%);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .1);
+    margin-top: 16px;
+}
+
+.list-unstyled {
+    padding-top: 12px;
+}
+
+.list-unstyled li {
+    cursor: pointer;
+    margin-top: 12px;
+}
+.list-unstyled li:hover {
+    color: var(--main-primary-color);
+    transition: 0.3s;
+}
+
+/* introduce */
+
+#introduce .introduce-infor p {
+    font-size : 17px;
+    /* padding: 5px; */
+    margin : 4px;
+}
+#introduce .introduce-infor a {
+   text-decoration: none;
+   color :#14b81f;
+}
+
+#introduce .button-introduce:hover{
+    background-color: #72be43 !important;
+    color: #fff !important;
+}
+
+
+/* booking a ticket */
+
+/* Vùng chứa ghế */
+#booking-ticket  .seat-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hàng ghế */
+#booking-ticket .row {
+    /* display: inline-flex; */
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+
+}
+
+/* Nhãn hàng (A, B, C, ...) */
+ .row-label {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 18px;
+    display : inline;
+    width : 10px;
+}
+
+/* Ghế ngồi */
+.seat {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left : 5px;
+}
+
+
+
+/* Chú thích */
+#booking-ticket  .legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+#booking-ticket  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* font-size : 30px; */
+}
+
+#booking-ticket  .legend-item i {
+    font-size: 30px;
+}
+#booking-ticket .legend-item .couple {
+    margin : 0;
+}
+
+#booking-ticket .couple-couch {
+    font-size: 29px;
+}
+
+#booking-ticket .couple-couch span {
+    margin-left: 10px;
+    color :  cyan;
+}
+#booking-ticket .couple-couch .label-left {
+    margin-right: 55px;
+}
+#booking-ticket .couple-couch .label-right {
+    margin-left: 55px;
+}
+
+/* .half-circle {
+    width: 200px;
+    height: 100px;
+    border-radius: 100px 100px 0 0;
+    background-color: transparent;
+    border: 2px solid black; /* Bạn có thể bỏ phần này nếu không muốn đường viền **/

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+       .separator {
+            border-top: 1px solid #ddd;
+            margin: 15px 0;
+        } .discounted-price {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .countdown {
+            color: red;
+            font-weight: bold;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+                <div style="text-align: center; color : #72be43" class="mb-2">Concession</div>
+                <div class="list-group">
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <img src="./asset/img/detail-food/662697.png" width="50" alt="Popcorn"> OL Combo1 - Sweet
+                            22Oz
+                        </div>
+                        <div>
+                            <span>Giá bán : </span>
+                            <strong id="valuecombo1">85000</strong><b> VND</b>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-secondary" onclick="updateQuantity('combo1', -1)">-</button>
+                            <span id="combo1" class="mx-2">0</span>
+                            <button class="btn btn-outline-success" onclick="updateQuantity('combo1', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <img src="./asset/img/detail-food/662697.png" width="50" alt="Popcorn"> OL Combo - Aquafina
+                        </div>
+                        <div>
+                            <span>Giá bán : </span>
+                            <strong id="valuecombo3">75000</strong><b> VND</b>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-secondary" onclick="updateQuantity('combo3', -1)">-</button>
+                            <span id="combo3" class="mx-2">0</span>
+                            <button class="btn btn-outline-success" onclick="updateQuantity('combo3', 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <img src="./asset/img/detail-food/662697.png" width="50" alt="Popcorn"> OL Combo2 - Sweet
+                            22Oz
+                        </div>
+                        <div>
+                            <span>Giá bán :</span>
+                            <strong id="valuecombo2">115000</strong> <b> VND</b>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-secondary" onclick="updateQuantity('combo2', -1)">-</button>
+                            <span id="combo2" class="mx-2">0</span>
+                            <button class="btn btn-outline-success" onclick="updateQuantity('combo2', 1)">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card p-3">
+                    <h6><strong>BHD Star The Garden</strong></h6>
+                    <p>Screen 6 - 22/3/2025 - Suất chiếu: 10h0</p>
+                    <h6 style="color : #72be43">THE SNOW QUEEN AND THE PRINCESS: CÔNG CHÚA BĂNG GIÁ</h6>
+
+                    <div class="separator"></div>
+
+                    <p><span class="badge bg-primary">P</span> <span class="badge bg-warning text-dark">LỒNG
+                            TIẾNG</span> <span class="badge bg-secondary">2D</span></p>
+
+                    <h5>Tổng tiền: <strong id="total">270000</strong> <b> VND</b></h5>
+
+                    <div class="separator"></div>
+                    <button class="btn  w-100" style="background-color:#72be43; color:white">THANH TOÁN (3/4)</button>
+                    <a href="#" class="text-decoration-none d-block text-center mt-2">← Trở lại</a>
+                    <p id="countdown" class="countdown text-center">Còn lại 6 phút, 19 giây</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const giagoc = parseInt(document.getElementById('total').innerText)
+        console.log(giagoc)
+
+        function updateQuantity(id, change) {
+            let quantityElement = document.getElementById(id);
+            let currentQuantity = parseInt(quantityElement.innerText);
+            let newQuantity = currentQuantity + change;
+            if (newQuantity >= 0) {
+                quantityElement.innerText = newQuantity;
+            }
+
+            // them 
+            const value = "value" + id;
+            let totalva = document.getElementById("total");
+            let total = parseInt(totalva.innerText);
+
+            if (change == 1 && id == "combo1") {
+                total += 85000;
+            }
+            if (change == 1 && id == "combo2") {
+                total += 115000;
+            }
+            if (change == 1 && id === "combo3") {
+                total += 75000;
+            }
+            if (change == -1 && id == "combo1" && total > giagoc) {
+                total -= 85000;
+            }
+            if (change == -1 && id == "combo2" && total > giagoc) {
+                total -= 115000;
+            }
+            if (change == -1 && id === "combo3" && total > giagoc) {
+                total -= 75000;
+            }
+
+            totalva.innerText = total;
+
+        }
+
+        function updateOrderSummary(id, quantity, name, price) {
+            let existingItem = document.getElementById(id);
+
+            if (quantity > 0) {
+                if (existingItem) {
+                    existingItem.innerHTML = `${quantity} x ${name} <span class="float-end">${(quantity * price).toLocaleString()} VND</span>`;
+                } else {
+                    let newItem = document.createElement("li");
+                    newItem.id = `order-${id}`;
+                    newItem.innerHTML = `${quantity} x ${name} <span class="float-end">${(quantity * price).toLocaleString()} VND</span>`;
+                    orderSummary.appendChild(newItem);
+                }
+            } else if (existingItem) {
+                existingItem.remove();
+            }
+        }
+
+        function startCountdown(durationInSeconds) {
+            let countdownElement = document.getElementById('countdown');
+            let timeRemaining = durationInSeconds;
+
+            let timer = setInterval(() => {
+                let minutes = Math.floor(timeRemaining / 60);
+                let seconds = timeRemaining % 60;
+                countdownElement.innerText = `Còn lại ${minutes} phút, ${seconds} giây`;
+
+                if (timeRemaining <= 0) {
+                    clearInterval(timer);
+                    countdownElement.innerText = "Hết thời gian!";
+                }
+
+                timeRemaining--;
+            }, 1000);
+        }
+
+        startCountdown(379);
+    </script>
+</body>
+
+</html>
